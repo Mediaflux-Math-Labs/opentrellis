@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 100% 98%; /* Lighter background for light mode */
+    --foreground: 210 15% 20%; /* Darker text for better readability */
+
+    --muted: 210 70% 96%; /* More vibrant muted color */
+    --muted-foreground: 210 50% 20%; /* Darker text on muted background */
+
+    --popover: 210 100% 98%; /* Vibrant background for popovers */
+    --popover-foreground: 210 15% 20%; /* Readable text in popovers */
+
+    --card: 210 100% 98%; /* Lighter cards */
+    --card-foreground: 210 15% 20%; /* Contrast text on card */
+
+    --border: 210 30% 80%; /* Subtle borders */
+    --input: 210 30% 80%; /* Lighter input fields */
+
+    --primary: 240 80% 50%; /* Bright blue for primary actions */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 30 80% 50%; /* A warm secondary color */
+    --secondary-foreground: 210 20% 10%; /* Dark text on secondary */
+
+    --accent: 340 80% 50%; /* Bright pink for accents */
+    --accent-foreground: 0 0% 100%; /* White text on accent colors */
+
+    --destructive: 0 80% 50%; /* Bright red for warnings or errors */
+    --destructive-foreground: 0 0% 100%; /* White on destructive */
+
+    --ring: 210 50% 50%; /* More noticeable focus ring */
+
+    --radius: 0.5rem; /* Rounded corners for a modern look */
+  }
+
+  .dark {
+    --background: 210 30% 15%; /* Darker background for dark mode */
+    --foreground: 210 60% 95%; /* Lighter text for dark mode readability */
+
+    --muted: 210 30% 20%; /* Less vibrant, more subtle for dark mode */
+    --muted-foreground: 210 60% 95%; /* Readable text on muted background */
+
+    --popover: 210 30% 15%; /* Dark mode popover */
+    --popover-foreground: 210 60% 95%; /* Text for dark mode popovers */
+
+    --card: 210 30% 18%; /* Slightly lighter cards in dark mode */
+    --card-foreground: 210 60% 95%; /* Readable card text */
+
+    --border: 210 45% 35%; /* Dark mode borders */
+    --input: 210 45% 35%; /* Dark mode input fields */
+
+    --primary: 240 70% 60%; /* Vibrant primary for dark mode */
+    --primary-foreground: 0 0% 100%; /* Contrast on primary buttons */
+
+    --secondary: 30 70% 60%; /* Secondary color for dark mode */
+    --secondary-foreground: 210 100% 95%; /* Dark mode secondary text */
+
+    --accent: 340 70% 60%; /* Dark mode accents */
+    --accent-foreground: 0 0% 100%; /* White text on accents */
+
+    --destructive: 0 100% 70%; /* More vibrant destructive in dark mode */
+    --destructive-foreground: 0 0% 100%; /* White on destructive */
+
+    --ring: 210 50% 60%; /* Dark mode focus ring */
+
+    --radius: 0.5rem; /* Consistent rounded corners */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
